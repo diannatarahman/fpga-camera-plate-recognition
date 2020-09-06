@@ -1,0 +1,60 @@
+net "clk_100mhz" loc=v10 | iostandard=lvcmos33;
+net "clk_100mhz" tnm_net = sys_clk_pin;
+timespec ts_sys_clk_pin = period sys_clk_pin 100000 khz;
+
+net "ov7670_pclk" clock_dedicated_route = false;
+
+## leds
+net "config_finished" loc = u16 | iostandard = lvcmos33;
+
+## switches
+net "reset" loc = t10 | iostandard = lvcmos33;
+net "capture" loc = t9 | iostandard = lvcmos33;
+net "pause_en" loc = v9 | iostandard = lvcmos33;
+net "next_addr_dir" loc = m8 | iostandard = lvcmos33;
+net "threshold_nextval_dir" loc = n8 | iostandard = lvcmos33;
+net "next_index_dir" loc = u8 | iostandard = lvcmos33;
+net "next_pixel_ori" loc = v8 | iostandard = lvcmos33;
+net "next_pixel_dir" loc = t5 | iostandard = lvcmos33;
+
+## buttons
+net "pause" loc = b8 | iostandard = lvcmos33;
+net "threshold_nextval" loc = a8 | iostandard = lvcmos33;
+net "next_addr" loc = c4 | iostandard = lvcmos33;
+net "next_pixel" loc = c9 | iostandard = lvcmos33;
+net "next_index" loc = d9 | iostandard = lvcmos33;
+
+## vga connector
+net "vga_r<0>" loc = u7 | iostandard = lvcmos33;
+net "vga_r<1>" loc = v7 | iostandard = lvcmos33;
+net "vga_r<2>" loc = n7 | iostandard = lvcmos33;
+net "vga_g<0>" loc = p8 | iostandard = lvcmos33;
+net "vga_g<1>" loc = t6 | iostandard = lvcmos33;
+net "vga_g<2>" loc = v6 | iostandard = lvcmos33;
+net "vga_b<1>" loc = r7 | iostandard = lvcmos33;
+net "vga_b<2>" loc = t7 | iostandard = lvcmos33;
+
+net "vga_hs" loc = n6 | iostandard = lvcmos33;
+net "vga_vs" loc = p7 | iostandard = lvcmos33;
+
+## 12 pin connectors
+
+##jb
+net "ov7670_pwdn" loc = k2 | iostandard = lvcmos33;
+net "ov7670_data<0>" loc = k1 | iostandard = lvcmos33 | pulldown;
+net "ov7670_data<2>" loc = l4 | iostandard = lvcmos33 | pulldown;
+net "ov7670_data<4>" loc = l3 | iostandard = lvcmos33 | pulldown;
+net "ov7670_reset_1" loc = j3 | iostandard = lvcmos33;
+net "ov7670_data<1>" loc = j1 | iostandard = lvcmos33 | pulldown;
+net "ov7670_data<3>" loc = k3 | iostandard = lvcmos33 | pulldown;
+net "ov7670_data<5>" loc = k5 | iostandard = lvcmos33 | pulldown;
+
+##jc
+net "ov7670_data<6>" loc = h3 | iostandard = lvcmos33 | pulldown;
+net "ov7670_xclk" loc = l7 | iostandard = lvcmos33 | pulldown;
+net "ov7670_href" loc = k6 | iostandard = lvcmos33;
+net "ov7670_siod" loc = g3 | iostandard = lvcmos33 | pullup;
+net "ov7670_data<7>" loc = g1 | iostandard = lvcmos33 | pulldown;
+net "ov7670_pclk" loc = j7 | iostandard = lvcmos33;
+net "ov7670_vsync" loc = j6 | iostandard = lvcmos33;
+net "ov7670_sioc" loc = f2 | iostandard = lvcmos33;
