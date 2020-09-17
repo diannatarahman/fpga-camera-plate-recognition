@@ -8,7 +8,6 @@ Undergraduate thesis project about FPGA based vehicle number plate recognition
 
 # How it works
 The FPGA Board will be programmed with these major blocks being implemented:
-
 **Camera controller -> SCCB interface** -> (OV7670 Camera Module) -> **image capture interface -> memory -> number plate recognition -> VGA driver** -> (Monitor)
 
 The algorithm of the number plate recognition based on known image processing techniques (vertical edge detection, thresholding, clipping / cropping based on projection analysis, weighted average downsampling) then the final OCR (Optical Character Recognition) is simply compare with reference images and choose the one with lowest error / distance.
