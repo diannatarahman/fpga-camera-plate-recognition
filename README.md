@@ -23,8 +23,8 @@ The algorithm of the number plate recognition based on known image processing te
 ![alt text](https://raw.githubusercontent.com/diannatarahman/fpga-camera-plate-recognition/master/pictures/plate_2_stage_4.jpg)
 
 # Experiment result
-Top left: initial image
-Top right: plate localization
-Bottom left: character segmentation
-Bottom right: OCR
+•	Top left: initial image
+•	Top right: plate localization
+•	Bottom left: character segmentation
+•	Bottom right: OCR
 ![alt text](https://raw.githubusercontent.com/diannatarahman/fpga-camera-plate-recognition/master/pictures/plate_2_distance_30_cm.jpg)
